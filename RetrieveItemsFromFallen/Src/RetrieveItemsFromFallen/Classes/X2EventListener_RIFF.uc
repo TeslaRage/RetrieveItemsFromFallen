@@ -26,9 +26,9 @@ static protected function EventListenerReturn CovertAction_ModifyNarrativeParamT
 	local XComGameState_CovertAction Action;
 	local XGParamTag kTag;
 	local XComGameStateHistory History;
-    local XComGameState_Reward Reward;
-    local XComGameState_Unit Unit;
-    local XComGameState_StoreItemsForRetrieval StorageContainer;
+	local XComGameState_Reward Reward;
+	local XComGameState_Unit Unit;
+	local XComGameState_StoreItemsForRetrieval StorageContainer;
 	
 	Action = XComGameState_CovertAction(EventSource);
 	kTag = XGParamTag(EventData);
@@ -38,11 +38,11 @@ static protected function EventListenerReturn CovertAction_ModifyNarrativeParamT
 
 	History = `XCOMHISTORY;
 
-    Reward = XComGameState_Reward(History.GetGameStateForObjectID(Action.StoredRewardRef.ObjectID));
-    StorageContainer = XComGameState_StoreItemsForRetrieval(History.GetGameStateForObjectID(Reward.RewardObjectReference.ObjectID));
-    Unit = XComGameState_Unit(History.GetGameStateForObjectID(StorageContainer.UnitRef.ObjectID));
+	Reward = XComGameState_Reward(History.GetGameStateForObjectID(Action.StoredRewardRef.ObjectID));
+	StorageContainer = XComGameState_StoreItemsForRetrieval(History.GetGameStateForObjectID(Reward.RewardObjectReference.ObjectID));
+	Unit = XComGameState_Unit(History.GetGameStateForObjectID(StorageContainer.UnitRef.ObjectID));
 
-    if (Unit != none) kTag.StrValue4 = Unit.GetSoldierShortRankName() @Unit.GetFullName();
+	if (Unit != none) kTag.StrValue4 = Unit.GetSoldierShortRankName() @Unit.GetFullName();
 	
 	return ELR_NoInterrupt;
 }
