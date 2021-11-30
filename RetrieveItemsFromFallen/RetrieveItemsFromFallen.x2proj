@@ -11,6 +11,7 @@
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Localization\" />
+    <Folder Include="Content" />
     <Folder Include="Src\" />
     <Folder Include="Src\RetrieveItemsFromFallen\" />
     <Folder Include="Src\RetrieveItemsFromFallen\Classes\" />
@@ -20,6 +21,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\XComRIFF.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_CA_Recover.upk">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
