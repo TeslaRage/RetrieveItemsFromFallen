@@ -70,7 +70,7 @@ static function GenerateItemsToRetrieveReward(XComGameState_Reward RewardState, 
 		if (IsUnitEligible(Unit)) Units.AddItem(Unit);
 	}
 
-	// If not units are found, something is terribly wrong
+	// If no units are found, something is terribly wrong
 	if (Units.Length <= 0) 
 	{
 		`REDSCREEN("Welp, cannot get any units to retrieve item(s) from. This should have been prevented in IsRetrieveItemRewardAvailable");

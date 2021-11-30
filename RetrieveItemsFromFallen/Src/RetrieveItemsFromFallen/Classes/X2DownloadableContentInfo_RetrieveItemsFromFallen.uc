@@ -1,1 +1,0 @@
-class X2DownloadableContentInfo_RetrieveItemsFromFallen extends X2DownloadableContentInfo;

@@ -20,8 +20,7 @@ static function X2DataTemplate CreateRetrieveBodyTemplate()
 	Template.ChooseLocationFn = ChooseRandomRegion;
 	Template.OverworldMeshPath = "UI_3D.Overwold_Final.CovertAction";
 	Template.RequiredFactionInfluence = default.FactionInfluence;
-	Template.bForceCreation = true;
-	// Template.bMultiplesAllowed = true;
+	Template.bForceCreation = true;	
 
 	Template.Narratives.AddItem('CovertActionNarrative_RetrieveBody_Skirmishers');
 	Template.Narratives.AddItem('CovertActionNarrative_RetrieveBody_Reapers');
