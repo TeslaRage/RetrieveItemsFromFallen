@@ -2,6 +2,7 @@ class X2StrategyElement_RIFFRewards extends X2StrategyElement_DefaultRewards con
 
 var config array<name> FallenItemsToRetrieve;
 var config array<name> BlacklistedItems;
+var config array<name> BlackListedUnitTemplate;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -183,6 +184,9 @@ static function bool IsUnitEligible(XComGameState_Unit Unit)
 
 	// If body has been recovered, there is no point to this
 	if (Unit.bBodyRecovered) return false;
+
+	// Check for blacklisted template
+	if (default.BlackListedUnitTemplate.Find(Unit.GetMyTemplateName()) != INDEX_NONE) return false;
 
 	History = `XCOMHISTORY;
 
