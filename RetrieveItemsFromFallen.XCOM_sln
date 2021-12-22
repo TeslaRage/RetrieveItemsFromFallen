@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # XCOM ModBuddy Solution File, Format Version 11.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "RetrieveItemsFromFallen", "RetrieveItemsFromFallen\RetrieveItemsFromFallen.x2proj", "{5EAF39A7-0317-472D-8BE0-D103B95DCFD8}"
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "RetrieveItemsFromFallen", "RetrieveItemsFromFallen\RetrieveItemsFromFallen.x2proj", "{A8E85AC2-8E85-4B34-8BE8-27C8B0DD53AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|XCOM 2 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5EAF39A7-0317-472D-8BE0-D103B95DCFD8}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
-		{5EAF39A7-0317-472D-8BE0-D103B95DCFD8}.Default|XCOM 2.Build.0 = Default|XCOM 2
+		{A8E85AC2-8E85-4B34-8BE8-27C8B0DD53AA}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
+		{A8E85AC2-8E85-4B34-8BE8-27C8B0DD53AA}.Default|XCOM 2.Build.0 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
