@@ -1,6 +1,9 @@
 class X2StrategyElement_RIFFCovertActions extends X2StrategyElement_DefaultCovertActions config (RIFF);
 
 var config EFactionInfluence FactionInfluence;
+var config int MinRankForCovertAction;
+var config name OptionalCost;
+var config int OptionalCostQty;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -26,9 +29,9 @@ static function X2DataTemplate CreateRetrieveBodyTemplate()
 	Template.Narratives.AddItem('CovertActionNarrative_RetrieveBody_Reapers');
 	Template.Narratives.AddItem('CovertActionNarrative_RetrieveBody_Templars');
 
-	Template.Slots.AddItem(CreateDefaultSoldierSlot('CovertActionSoldierStaffSlot', 3));
+	Template.Slots.AddItem(CreateDefaultSoldierSlot('CovertActionSoldierStaffSlot', default.MinRankForCovertAction));
 	Template.Slots.AddItem(CreateDefaultSoldierSlot('CovertActionSoldierStaffSlot'));
-	Template.OptionalCosts.AddItem(CreateOptionalCostSlot('Intel', 25));
+	Template.OptionalCosts.AddItem(CreateOptionalCostSlot(default.OptionalCost, default.OptionalCostQty));
 
 	Template.Risks.AddItem('CovertActionRisk_SoldierWounded');
 	Template.Risks.AddItem('CovertActionRisk_SoldierCaptured');
