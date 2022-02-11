@@ -3,6 +3,7 @@ class X2StrategyElement_RIFFRewards extends X2StrategyElement_DefaultRewards con
 var config array<name> FallenItemsToRetrieve;
 var config array<name> BlacklistedItems;
 var config array<name> BlackListedUnitTemplate;
+var config array<EInventorySlot> BlacklistedSlot;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -88,6 +89,9 @@ static function GenerateItemsToRetrieveReward(XComGameState_Reward RewardState, 
 		if (Item == none) continue;
 
 		if (default.BlacklistedItems.Find(Item.GetMyTemplateName()) != INDEX_NONE) continue;
+
+		// If item is in blacklisted slot, skip it
+		if (default.BlacklistedSlot.Find(Item.InventorySlot) != INDEX_NONE) continue;
 
 		ItemRefs.AddItem(ItemRef);
 	}
